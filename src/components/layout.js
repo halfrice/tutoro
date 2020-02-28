@@ -1,5 +1,7 @@
 import React from "react"
 
+import "normalize.css/normalize.css"
+
 const Layout = ({ children }) => {
   return (
     <div id="root">
