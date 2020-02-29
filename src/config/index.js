@@ -11,9 +11,10 @@ module.exports = {
   manifest: {
     name: "Tutoro",
     shortName: "Tutoro",
-    startUrl: "https://github.com/halfrice/tutoro",
+    startUrl: "/",
     backgroundColor: "#101114",
     themeColor: "#202124",
-    display: "standalone",
+    display: "minimal-ui",
+    lang: "en",
   },
 }
