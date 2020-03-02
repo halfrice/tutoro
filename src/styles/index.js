@@ -1,5 +1,8 @@
-import GlobalStyles from "./global"
+import GlobalStyles from "./GlobalStyles"
+import Main from "./Main"
+import Section from "./Section"
 import device from "./device"
+import mixins from "./mixins"
 import theme from "./theme.yaml"
 
-export { GlobalStyles, device, theme }
+export { GlobalStyles, Main, Section, device, mixins, theme }

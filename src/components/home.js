@@ -1,13 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { theme } from "~styles"
+import { Section, mixins, theme } from "~styles"
 
 const { colors } = theme
+const { flex } = mixins
 
-const HomeContainer = styled.div`
-  display: flex;
-  align-items: flex-start;
+const HomeContainer = styled(Section)`
+  ${flex.start};
   flex-direction: column;
 `
 const Name = styled.h1`

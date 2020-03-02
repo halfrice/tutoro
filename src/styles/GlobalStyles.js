@@ -4,6 +4,16 @@ import theme from "./theme.yaml"
 const { colors } = theme
 
 const GlobalStyles = createGlobalStyle`
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
   body {
     background-color: ${colors.dark};
     color: ${colors.light};
@@ -18,12 +28,6 @@ const GlobalStyles = createGlobalStyle`
     color: ${colors.darkPink};
     font-weight: 600;
   }
-
-  #root {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 100%;
-    min-height: 100vh;
-  }
 `
+
 export default GlobalStyles
