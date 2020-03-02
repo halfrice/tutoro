@@ -1,4 +1,5 @@
+import Home from "./home"
 import Layout from "./layout"
 import Seo from "./seo"
 
-export { Layout, Seo }
+export { Home, Layout, Seo }

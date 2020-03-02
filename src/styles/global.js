@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${colors.dark};
     color: ${colors.light};
+    font-weight: 400;
   }
 
   h1,

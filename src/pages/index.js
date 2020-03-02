@@ -1,8 +1,34 @@
 import React from "react"
-import Layout from "~components/layout"
+import PropTypes from "prop-types"
+import { graphql } from "gatsby"
+import { Home, Layout } from "~components"
 
-export default () => (
-  <Layout>
-    <h2>Tutoro</h2>
-  </Layout>
-)
+const IndexPage = ({ data }) => {
+  return (
+    <Layout>
+      <Home data={data.home.edges} />
+    </Layout>
+  )
+}
+
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
+export default IndexPage
+
+export const indexPageQuery = graphql`
+  {
+    home: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/home/" } }) {
+      edges {
+        node {
+          frontmatter {
+            name
+            title
+          }
+          html
+        }
+      }
+    }
+  }
+`

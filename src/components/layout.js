@@ -7,28 +7,26 @@ import GlobalStyles from "~styles/global"
 
 const Layout = ({ children }) => {
   return (
-    <div id="root">
-      <StaticQuery
-        query={graphql`
-          query LayoutQuery {
-            site {
-              siteMetadata {
-                title
-                siteUrl
-                description
-              }
+    <StaticQuery
+      query={graphql`
+        query LayoutQuery {
+          site {
+            siteMetadata {
+              title
+              siteUrl
+              description
             }
           }
-        `}
-        render={({ site }) => (
-          <div id="root">
-            <Seo metadata={site.siteMetadata} />
-            <GlobalStyles />
-            <div className="site-content">{children}</div>
-          </div>
-        )}
-      />
-    </div>
+        }
+      `}
+      render={({ site }) => (
+        <div id="root">
+          <Seo metadata={site.siteMetadata} />
+          <GlobalStyles />
+          <div>{children}</div>
+        </div>
+      )}
+    />
   )
 }
 

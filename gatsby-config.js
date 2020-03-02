@@ -8,10 +8,6 @@ module.exports = {
     siteUrl: site.url,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -24,6 +20,23 @@ module.exports = {
         lang: manifest.lang,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "content",
+        path: `${__dirname}/src/content/`,
+      },
+    },
     `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [],
+      },
+    },
   ],
 }
