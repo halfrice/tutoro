@@ -32,10 +32,19 @@ const GlobalStyles = createGlobalStyle`
   h3,
   h4,
   h5 {
-    margin: 0.33em 0 0.33em 0;
-    color: ${color.darkPink};
     font-weight: 600;
   }
+
+  pre {
+    padding: 0.5em !important;
+  }
+
+  code {
+    font-family: ${font.sourceCodePro} !important;
+    font-size: ${fontSize.xs} !important;
+  }
+
+  
 `
 
 export default GlobalStyles
