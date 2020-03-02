@@ -1,4 +1,5 @@
 import GlobalStyles from "./global"
+import device from "./device"
 import theme from "./theme.yaml"
 
-export { GlobalStyles, theme }
+export { GlobalStyles, device, theme }
