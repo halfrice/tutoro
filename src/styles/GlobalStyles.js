@@ -1,7 +1,8 @@
 import { createGlobalStyle } from "styled-components"
 import theme from "./theme.yaml"
+import device from "./device"
 
-const { colors } = theme
+const { color, font, fontSize } = theme
 
 const GlobalStyles = createGlobalStyle`
   html {
@@ -15,9 +16,15 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${colors.dark};
-    color: ${colors.light};
+    background-color: ${color.dark};
+    color: ${color.light};
+    font-family: ${font.openSans};
+    font-size: ${fontSize.md};
+    ${device.tablet`font-size: ${fontSize.sm};`};
     font-weight: 400;
+    line-height: 1.35;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
   }
 
   h1,
@@ -25,7 +32,8 @@ const GlobalStyles = createGlobalStyle`
   h3,
   h4,
   h5 {
-    color: ${colors.darkPink};
+    margin: 0.33em 0 0.33em 0;
+    color: ${color.darkPink};
     font-weight: 600;
   }
 `

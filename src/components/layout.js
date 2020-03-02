@@ -6,7 +6,7 @@ import styled from "styled-components"
 import "normalize.css/normalize.css"
 import { GlobalStyles } from "~styles"
 
-const App = styled.div`
+const LayoutContainer = styled.div`
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 100%;
@@ -28,11 +28,11 @@ const Layout = ({ children }) => {
         }
       `}
       render={({ site }) => (
-        <App>
+        <LayoutContainer>
           <Seo metadata={site.siteMetadata} />
           <GlobalStyles />
           {children}
-        </App>
+        </LayoutContainer>
       )}
     />
   )

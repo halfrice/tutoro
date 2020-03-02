@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Section, mixins, theme } from "~styles"
 
-const { colors } = theme
+const { color, font } = theme
 const { flex } = mixins
 
 const HomeContainer = styled(Section)`
@@ -11,13 +11,17 @@ const HomeContainer = styled(Section)`
   flex-direction: column;
 `
 const Name = styled.h1`
-  color: ${colors.darkPink};
+  color: ${color.darkPink};
+  font-family: ${font.sourceSansPro};
+  margin-top: 0;
 `
 const Title = styled.h2`
-  color: ${colors.lightSlate};
+  color: ${color.darkPurple};
+  font-family: ${font.sourceCodePro};
 `
 const Content = styled.div`
-  color: ${colors.light};
+  color: ${color.light};
+  font-family: ${font.openSans};
 `
 
 const Home = props => {

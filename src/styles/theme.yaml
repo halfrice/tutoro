@@ -1,4 +1,4 @@
-colors:
+color:
   black: "#000000"
   lightBlack: "#08090C"
   dark: "#101114"
@@ -25,3 +25,21 @@ colors:
   darkBlue: "#0969F9"
   purple: "#EE00FF"
   darkPurple: "#9A2DFF"
+
+fontSize:
+  xxs: "12px"
+  xs: "13px"
+  sm: "14px"
+  md: "16px"
+  lg: "18px"
+  xl: "20px"
+  xxl: "24px"
+  xxxl: "28px"
+  h3: "32px"
+  h2: "48px"
+  h1: "64px"
+
+font:
+  openSans: "Open Sans, sans-serif"
+  sourceSansPro: "Source Sans Pro, sans-serif"
+  sourceCodePro: "Source Code Pro, monospace"
