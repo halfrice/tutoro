@@ -43,3 +43,5 @@ font:
   openSans: "Open Sans, sans-serif"
   sourceSansPro: "Source Sans Pro, sans-serif"
   sourceCodePro: "Source Code Pro, monospace"
+
+easing: "cubic-bezier(0.645, 0.045, 0.355, 1)"
