@@ -8,8 +8,9 @@ const { color, font } = theme
 const { flex } = mixins
 
 const HomeContainer = styled(Section)`
-  ${flex.start};
+  ${flex.center};
   flex-direction: column;
+  min-height: calc(80vh);
 `
 const TransitionContainer = styled(TransitionGroup)`
   margin: 0 auto;
