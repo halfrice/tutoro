@@ -44,4 +44,15 @@ font:
   sourceSansPro: "Source Sans Pro, sans-serif"
   sourceCodePro: "Source Code Pro, monospace"
 
+time:
+  short: "0.25s"
+  medium: "0.5s"
+  long: "1s"
+
 easing: "cubic-bezier(0.645, 0.045, 0.355, 1)"
+transition: "all 0.5s ease-in-out"
+shortTransition: "all 0.25s ease-in-out"
+
+navbar:
+  height: "100px"
+  dirtyHeight: "60px"

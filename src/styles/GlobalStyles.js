@@ -35,6 +35,19 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 600;
   }
 
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: ${theme.transition};
+    cursor: pointer;
+    &:hover {
+      color: ${color.darkSlate};
+      outline: 0;
+    }
+  }
+
   pre {
     padding: 0.5em !important;
   }

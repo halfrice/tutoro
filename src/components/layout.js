@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import { Seo } from "~components"
+import { Navbar, Seo } from "~components"
 import styled from "styled-components"
 import "normalize.css/normalize.css"
 import { GlobalStyles } from "~styles"
@@ -31,6 +31,7 @@ const Layout = ({ children }) => {
         <LayoutContainer>
           <Seo metadata={site.siteMetadata} />
           <GlobalStyles />
+          <Navbar />
           {children}
         </LayoutContainer>
       )}
