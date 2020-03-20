@@ -1,17 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import { Home, Layout, Tutorials } from "~components"
+import { Home, Tutorials } from "~components"
 import { Main } from "~styles"
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout>
-      <Main>
-        <Home data={data.home.edges} />
-        <Tutorials data={data.tutorials.edges} />
-      </Main>
-    </Layout>
+    <Main>
+      <Home data={data.home.edges} />
+      <Tutorials data={data.tutorials.edges} />
+    </Main>
   )
 }
 

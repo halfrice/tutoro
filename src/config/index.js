@@ -17,4 +17,18 @@ module.exports = {
     display: "minimal-ui",
     lang: "en",
   },
+  navbarLinks: [
+    {
+      name: "Tutorials",
+      url: "/tutorials",
+    },
+    {
+      name: "About",
+      url: "/about",
+    },
+    {
+      name: "Contact",
+      url: "/contact",
+    },
+  ],
 }

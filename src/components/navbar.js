@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react"
 import { Link } from "gatsby"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import styled from "styled-components"
+import { navbarLinks } from "~config"
 import { Main, mixins, theme } from "~styles"
 import { throttle, useEventListener } from "~utils"
 
@@ -9,7 +10,8 @@ const { color, font, navbar } = theme
 const { flex } = mixins
 
 const NavbarContainer = styled(Main)`
-  ${flex.between};
+  ${flex.start};
+  align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
@@ -23,10 +25,22 @@ const NavbarContainer = styled(Main)`
 `
 const LogoLink = styled(Link)`
   ${flex.center};
-  margin: 0;
 `
 const Logo = styled.div`
-  margin: 0 auto;
+  margin: 0 10px 0 0;
+`
+const NavbarList = styled.ol`
+  ${flex.center};
+  list-style: none !important;
+  div {
+    ${flex.between};
+  }
+`
+const NavbarListItem = styled.li`
+  margin: 0 10px;
+`
+const NavbarLink = styled(Link)`
+  ${flex.center};
 `
 
 const Navbar = () => {
@@ -87,6 +101,22 @@ const Navbar = () => {
           </CSSTransition>
         )}
       </TransitionGroup>
+
+      <NavbarList>
+        <TransitionGroup>
+          {isMounted &&
+            navbarLinks &&
+            navbarLinks.map(({ url, name }, i) => (
+              <CSSTransition key={i} classNames="fadedown" timeout={3000}>
+                <NavbarListItem
+                  style={{ transitionDelay: `${(i + 1) * 200}ms` }}
+                >
+                  <NavbarLink to={url}>{name}</NavbarLink>
+                </NavbarListItem>
+              </CSSTransition>
+            ))}
+        </TransitionGroup>
+      </NavbarList>
     </NavbarContainer>
   )
 }
