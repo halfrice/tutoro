@@ -13,7 +13,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^2.19.7",
+    "gatsby": "^4.25.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
